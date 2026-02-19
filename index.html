@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enrollment Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Enrollment Application Form</h1>
+    <form id="enrollmentForm">
+    <section>
+        <h2>1. Personal Information</h2>
+
+        <div class="grid-4">
+            <input type="text" placeholder="First Name">
+            <input type="text" placeholder="Middle Name">
+            <input type="text" placeholder="Last Name">
+            <input type="text" placeholder="Suffix">
+        </div>
+
+        <div class="grid-3">
+            <input type="date">
+            
+            <select>
+                <option>Gender</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Non-binary</option>
+            </select>
+
+            <select>
+                <option>Nationality</option>
+                <option>Filipino</option>
+                <option>American</option>
+                <option>Other</option>
+            </select>
+        </div>
+
+        <input type="text" placeholder="Religion">
+    </section>
+
+    <section>
+        <h2>2. Contact Details</h2>
+
+        <input type="email" placeholder="Email Address">
+
+
+        
+        <div class="grid-2">
+            <input type="text" placeholder="Mobile Number" inputmode="numeric" pattern="[0-9]*" required id="mobile">
+            <input type="text" placeholder="Landline" inputmode="numeric" pattern="[0-9]*" required id="landline">
+        </div>
+
+        <script>
+            const mobileInput = document.getElementById('mobile');
+            const landlineInput = document.getElementById('landline');
+
+             // Function to allow only digits
+             function onlyNumbers(event) {
+                 event.target.value = event.target.value.replace(/\D/g, '');
+            }
+
+  // Attach event listeners
+            mobileInput.addEventListener('input', onlyNumbers);
+            landlineInput.addEventListener('input', onlyNumbers);
+        </script>
+
+        <h3>Complete Home Address</h3>
+        <input type="text" placeholder="Street">
+        <input type="text" placeholder="Barangay">
+        <div class="grid-3">
+            <input type="text" placeholder="City">
+            <input type="text" placeholder="Province">
+            <input type="text" placeholder="Zip Code" inputmode="numeric" pattern="[0-9]*" require id="zipcode">
+        <script>
+            const zipcodeInput = document.getElementById('zipcode');   
+            
+            function onlyNumbers(event) {
+                event.target.value = event.target.value.replace(/\D/g, '');
+            }
+
+            zipcodeInput.addEventListener('input', onlyNumbers);
+        </script>
+        </div>
+    </section>
+
+    <!-- 3. Academic History -->
+    <section>
+        <h2>3. Academic History</h2>
+
+        <h3>Grade School</h3>
+        <input type="text" placeholder="School Name">
+        <div class="grid-2">
+            <input type="text" placeholder="Year Graduated" inputmode="numeric" pattern="[0-9]*" require id="yeargraduated">
+            <input type="text" placeholder="School Address">
+        <script> 
+         const yeargraduatedInput = document.getElementById('yeargraduated');
+         
+         function onlyNumbers(event) {
+            event.target.value = event.target.value.replace(/\D/g, '');
+         }
+
+            yeargraduatedInput.addEventListener('input', onlyNumbers);
+        
+        </script>
+        </div>
+
+        <h3>Junior High School</h3>
+        <input type="text" placeholder="School Name">
+        <div class="grid-2">
+            <input type="text" placeholder="Year Graduated" inputmode="numeric" pattern="[0-9]*" require id="yeargraduated1" >
+            <input type="text" placeholder="School Address">
+        <script> 
+         const yeargraduated1Input = document.getElementById('yeargraduated1');
+         
+         function onlyNumbers(event) {
+            event.target.value = event.target.value.replace(/\D/g, '');
+         }
+
+            yeargraduated1Input.addEventListener('input', onlyNumbers);
+        </script>
+        </div>
+
+        <h3>Senior High School</h3>
+        <input type="text" placeholder="School Name">
+        <div class="grid-3">
+            <input type="text" placeholder="Year Graduated" inputmode="numeric" pattern="[0-9]*" require id="yeargraduated2">
+            <input type="text" placeholder="Grade Average" inputmode="numeric" pattern="[0-9]*" require id="average">
+            <input type="text" placeholder="School Address">
+        <script> 
+         const yeargraduated2Input = document.getElementById('yeargraduated2');
+         const averageInput = document.getElementById('average');
+         
+         function onlyNumbers(event) {
+            event.target.value = event.target.value.replace(/\D/g, '');
+         }
+
+            yeargraduated2Input.addEventListener('input', onlyNumbers);
+            averageInput.addEventListener('input',onlyNumbers);
+        </script>
+        </div>
+    </section>
+
+    <section>
+        <h2>4. Enrollment Choices</h2>
+
+        <h3>Academic Level</h3>
+        <label><input type="radio" name="level" required> Undergraduate </label>
+        <label><input type="radio" name="level"> Graduate</label>
+
+        <h3>Semester</h3>
+        <label><input type="radio" name="semester" required> 1st Semester</label>
+        <label><input type="radio" name="semester"> 2nd Semester</label>
+
+        <h3>Campus</h3>
+        <label><input type="radio" name="campus" required> Manila</label>
+        <label><input type="radio" name="campus"> Quezon City</label>
+
+        <h3>College Department</h3>
+        <select name="Department" required>    
+            <option>Select Department</option>
+            <option>College of Engineering and Architecture</option>
+            <option>College of Computer Studies</option>
+            <option>College of Business Education</option>
+            <option>College of Arts</option>
+        </select>
+
+        <h3>Degree Program</h3>
+        <select name="Programs" required>
+            <optgroup label="Undergraduate Programs">
+                <option>BS Architecture</option>
+                <option>BS Chemical Engineering</option>
+                <option>BS Civil Engineering</option>
+                <option>BS Computer Engineering</option>
+                <option>BS Electrical Engineering</option>
+                <option>BS Electronics Engineering</option>
+                <option>BS Industrial Engineering</option>
+                <option>BS Mechanical Engineering</option>
+                <option>BS Computer Science</option>
+                <option>BS Data Science and Analytics</option>
+                <option>BS Entertainment and Multimedia Computing</option>
+                <option>BS Information Technology</option>
+                <option>BS Accountancy</option>
+                <option>BS Accounting Information System</option>
+                <option>BS Business Administration - Financial Management</option>
+                <option>BS Business Administration - Human Resource Management</option>
+                <option>BS Business Administration - Logistics and Supply Chain Management</option>
+                <option>BS Business Administration - Marketing Management</option>
+                <option>Bachelor of Arts in English Language</option>
+                <option>Bachelor of Arts in Political Science</option>
+            </optgroup>
+
+            <optgroup label="Graduate Programs">
+                <option>Doctor in Information Technology</option>
+                <option>Doctor of Engineering (Computer Engineering)</option>
+                <option>Doctor of Philosophy in Computer Science</option>
+                <option>Master in Information Systems</option>
+                <option>Master in Information Technology</option>
+                <option>Master in Logistics and Supply Chain Management</option>
+                <option>Master of Engineering (Civil Engineering)</option>
+                <option>Master of Engineering (Computer Engineering)</option>
+                <option>Master of Engineering (Electrical Engineering)</option>
+                <option>Master of Engineering (Electronics Engineering)</option>
+                <option>Master of Engineering (Industrial Engineering)</option>
+                <option>Master of Engineering (Mechanical Engineering)</option>
+                <option>Master of Science in Computer Science</option>
+            </optgroup>
+        </select>
+    </section>
+
+     <button type="submit">Submit Application</button>   
+
+        <!-- Success message -->
+        <p id="successMessage" style="display:none; color:green; font-weight:bold; margin-top:10px;">
+            Successfully submitted!
+        </p>
+    </form>   
+
+</div>
+
+<script>
+    // Form submission handling
+    const form = document.getElementById('enrollmentForm');
+    const successMessage = document.getElementById('successMessage');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent page reload
+
+        // Check if all required fields are filled
+        if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+        }
+
+        // Show success message
+        successMessage.style.display = 'block';
+
+        // Optionally reset the form
+        form.reset();
+    });
+</script>
+
+</body>
+</html>

@@ -49,8 +49,8 @@
 
         
         <div class="grid-2">
-            <input type="text" placeholder="Mobile Number" inputmode="numeric" pattern="[0-9]*" required id="mobile">
-            <input type="text" placeholder="Landline" inputmode="numeric" pattern="[0-9]*" required id="landline">
+            <input type="text" placeholder="Mobile Number" inputmode="numeric" pattern="[0-9]*" maxlength="11" required id="mobile">
+            <input type="text" placeholder="Landline" inputmode="numeric" pattern="[0-9]*" maxlength="8" required id="landline">
         </div>
 
         <script>
@@ -73,7 +73,7 @@
         <div class="grid-3">
             <input type="text" placeholder="City">
             <input type="text" placeholder="Province">
-            <input type="text" placeholder="Zip Code" inputmode="numeric" pattern="[0-9]*" require id="zipcode">
+            <input type="text" placeholder="Zip Code" inputmode="numeric" pattern="[0-9]*" maxlength="4" require id="zipcode">
         <script>
             const zipcodeInput = document.getElementById('zipcode');   
             
@@ -93,7 +93,7 @@
         <h3>Grade School</h3>
         <input type="text" placeholder="School Name">
         <div class="grid-2">
-            <input type="text" placeholder="Year Graduated" inputmode="numeric" pattern="[0-9]*" require id="yeargraduated">
+            <input type="text" placeholder="Year Graduated" inputmode="numeric" pattern="[0-9]*" maxlength="4" require id="yeargraduated">
             <input type="text" placeholder="School Address">
         <script> 
          const yeargraduatedInput = document.getElementById('yeargraduated');
@@ -110,7 +110,7 @@
         <h3>Junior High School</h3>
         <input type="text" placeholder="School Name">
         <div class="grid-2">
-            <input type="text" placeholder="Year Graduated" inputmode="numeric" pattern="[0-9]*" require id="yeargraduated1" >
+            <input type="text" placeholder="Year Graduated" inputmode="numeric" pattern="[0-9]*" maxlength="4" require id="yeargraduated1" >
             <input type="text" placeholder="School Address">
         <script> 
          const yeargraduated1Input = document.getElementById('yeargraduated1');
@@ -126,8 +126,8 @@
         <h3>Senior High School</h3>
         <input type="text" placeholder="School Name">
         <div class="grid-3">
-            <input type="text" placeholder="Year Graduated" inputmode="numeric" pattern="[0-9]*" require id="yeargraduated2">
-            <input type="text" placeholder="Grade Average" inputmode="numeric" pattern="[0-9]*" require id="average">
+            <input type="text" placeholder="Year Graduated" inputmode="numeric" pattern="[0-9]*" maxlength="4" require id="yeargraduated2">
+            <input type="text" placeholder="Grade Average" inputmode="numeric" pattern="[0-9]*" maxlength="2" require id="average">
             <input type="text" placeholder="School Address">
         <script> 
          const yeargraduated2Input = document.getElementById('yeargraduated2');
